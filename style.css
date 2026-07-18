@@ -1,0 +1,478 @@
+a {
+    text-decoration: none;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #4A3525;
+    overflow-x: hidden;
+}
+
+.section-title {
+    font-family: 'Kalnia', serif;
+    font-size: 2.2rem;
+    color: #4A321A;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.section-title-serif {
+    font-family: 'Kalnia', serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: #6E4A3C;
+    line-height: 1.2;
+}
+
+
+.hero-section {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-image: url('home5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: bisque;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.hero-text {
+    font-family: 'Kalnia', serif;
+    font-size: 3rem;   
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+
+.brand-title {
+    color: bisque;
+    font-family: 'Kalnia', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.9rem;
+    height: 2.9rem;
+    border: 0.2rem solid bisque;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: bisque;
+    margin-right: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #5D3325;
+    color: bisque(255, 255, 255);
+    box-shadow: 0 0 2rem bisque;
+    transform: translateY(-0.5rem);
+}
+
+
+.cookies-section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #FDFBF7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}  
+
+.cookies-grid {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; 
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
+}
+
+.cookie-card {
+    flex: 0 0 75%; 
+    scroll-snap-align: start;
+    background-color: #1A1A1A; 
+    border-radius: 16px;
+    height: 320px;
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cookie-card:hover {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cookie-image-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.cookie-overlay-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    max-width: 80%;
+}
+
+.cookie-name {
+    font-family: 'Kalnia', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5); 
+}
+
+.cookie-desc {
+    font-size: 0.85rem;
+    color: #F5E6D3;
+    line-height: 1.4;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+
+.cookie-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+    border-radius: 16px 16px 0 0;
+}
+
+.order-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #1A1A1A;
+    font-size: 0.9rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.order-btn:hover {
+    transform: scale(1.08);
+    background-color: #F5E6D3;
+}
+
+.desktop-only {
+    display: none; 
+}
+
+.cookie-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cookie-price {
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+
+.how-made-section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #F5E6D3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.how-made-container {
+    position: relative;
+    text-align: center;
+}
+
+.how-made-image {
+    position: absolute;
+    top: 50%;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.decor-left {
+    left: -100px;
+}
+
+.decor-right {
+    right: -100px;
+}
+
+.how-made-content {
+    position: relative;
+    z-index: 2;
+}
+
+.text-box {
+    background-color: rgba(140, 109, 88, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* buat Safari */
+    color: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 20px auto 0;
+    max-width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.testimonials-baker-section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #FDFBF7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonials-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.section-title-serif {
+    flex-shrink: 0;   
+    width: 220px;      
+    font-family: 'Kalnia', serif;
+    font-style: italic;
+    font-size: 2rem;
+    color: #6E4A3C;
+    line-height: 1.2;
+}
+
+.testimonial-cards {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 15px 25px 15px; 
+    margin: -20px -15px 0 -15px; 
+}
+
+.testi-card {
+    flex: 0 0 220px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 25px 20px;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testi-card:hover {
+    transform: scale(1.03) translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.quote-mark {
+    font-family: 'Kalnia', serif;
+    font-size: 2.5rem;
+    color: #D9C4A9;
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.testi-card p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #4A3525;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.testimonial-cards-row2 {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 15px 25px 15px;
+    margin: 0 -15px 0 -15px;
+}
+
+
+@media (min-width: 1024px) {
+    body {
+        box-shadow: 0 0 50px rgba(0,0,0,0.1);
+    }
+
+   
+    .hero-section {
+        height: 60vh; 
+    }
+    .hero-text {
+        font-size: 4rem;
+    }
+
+   
+    .cookies-section {
+        padding: 60px 50px;
+    }
+    .cookies-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 15px;
+    }
+    .cookie-card {
+        flex: 0 0 280px; 
+        scroll-snap-align: start;
+        height: 480px;
+    }
+    
+    .desktop-only {
+        display: flex; 
+    }
+
+    
+    .how-made-section {
+        padding: 80px 100px;
+    }
+
+    .how-made-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .how-made-image {
+        width: 940px;
+        height: 940px;
+    }
+    .decor-left {
+        left: -888px;
+    }
+    .decor-right {
+        right: -900px;
+    }
+    .text-box {
+        max-width: 500px;
+    }
+
+    
+    .testimonials-baker-section {
+        padding: 80px 50px;
+    }
+
+    .testimonials-container {
+        gap: 50px;
+    }
+    .testi-card {
+        flex: 0 0 180px;
+        height: 220px;
+        font: 1.1rem 'Playfair Display', sans-serif;
+    }
+
+    .testimonial-cards {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .testimonial-cards-row2 {
+        margin-top: 30px;
+    }
+}
+
+.meet-the-baker-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    text-align: left;
+}
+.baker-title {
+    font-size: 2.8rem;
+    align-self: center;
+}
+
+.baker-container {
+    flex-direction: row-reverse; 
+    align-items: center;
+    gap: 30px;
+}
+.baker-photo-wrapper {
+    width: 300px;
+}
+.baker-photo {
+    height: 400px;
+}
