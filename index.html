@@ -168,4 +168,18 @@
             <p>Literally best cookies ever?? Teksturnya itu lohh, luar crispy dalem chewy, PERFECT COMBO. udh order 2x dan bakal terus order, no debat</p>
         </div>
     </div>
+
+    <script>
+        const revealElements = document.querySelectorAll('.cookie-card, .testi-card');
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, { threshold: 0.2 }); // muncul kalau 20% card udah kelihatan
+    
+        revealElements.forEach(el => observer.observe(el));
+    </script>
 </section>

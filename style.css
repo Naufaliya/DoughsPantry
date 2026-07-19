@@ -138,11 +138,6 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cookie-card:hover {
-    transform: scale(1.05) translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
-}
-
 .cookie-image-placeholder {
     width: 100%;
     height: 100%;
@@ -224,6 +219,20 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.cookie-card,
+.testi-card {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.cookie-card.reveal,
+.testi-card.reveal {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .cookie-price {
@@ -336,11 +345,6 @@ body {
     scroll-snap-align: start;
     box-shadow: 0 4px 15px rgba(0,0,0,0.06);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testi-card:hover {
-    transform: scale(1.03) translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
 .quote-mark {
@@ -475,4 +479,16 @@ body {
 }
 .baker-photo {
     height: 400px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cookie-card:hover {
+        transform: scale(1.05) translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .testi-card:hover {
+        transform: scale(1.03) translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
 }
